@@ -1,0 +1,20 @@
+<section class="max-w-2xl px-6 py-8 mx-auto bg-white dark:bg-gray-900">
+    <main class="mt-8">
+        <h2 class="text-gray-700 dark:text-gray-200">Hi {{ user.first_name }} {{ user.last_name }},</h2>
+
+        <p class="mt-2 leading-loose text-gray-600 dark:text-gray-300">
+            Your have successfully borrowed {{ book.book_name }} book using {{ book.price }} taka. 
+            After successful transaction your account balance is: <span class="font-bold ">{{ user.account.balance }}</span> taka.
+        </p>
+                        
+        <p class="mt-8 text-gray-600 dark:text-gray-300">
+            Thanks, <br>
+            LearnPalace Library
+        </p>
+    </main>
+    
+
+    <footer class="mt-8">
+        <p class="mt-3 text-gray-500 dark:text-gray-400">© {% now "Y" %} LearnPalace Library. All Rights Reserved.</p>
+    </footer>
+</section>

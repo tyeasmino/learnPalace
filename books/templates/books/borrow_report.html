@@ -1,0 +1,61 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load humanize %}
+{% block head_title %} - Borrow Report {% endblock %} {% block content %}
+
+
+<div class="my-10 py-3 px-4 bg-white rounded-xl shadow-md">
+  <h1 class="font-bold text-3xl text-center pb-5 pt-2">Book Borrow Report</h1>
+
+  <table
+    class="table-auto mx-auto w-full px-5 rounded-xl mt-8 border dark:border-neutral-500"
+  >
+    <thead class="bg-purple-900 text-white text-left">
+      <tr
+        class="bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-md py-2 px-4 text-white font-bold"
+      >
+        <th class="px-4 py-2">Date</th>
+        <th class="px-4 py-2">Book Name </th>
+        <th class="px-4 py-2">Transaction Type </th>
+        <th class="px-4 py-2">Borrow Amount</th>
+        <th class="px-4 py-2">Balance After Transaction</th>
+        <th class="px-4 py-2">Return Book</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in report %} 
+        {% if r.borrowed_by == request.user %}
+            <tr class="border-b dark:border-neutral-500">
+                <td class="px-4 py-2"> {{ r.timestamp|date:"F d, Y h:i A" }} </td>
+                <td class="px-4 py-2"> {{ r.book_name.book_name}}  </td>
+                <td class="px-4 py-3 text-s border"> <span class="px-2 py-1 font-bold leading-tight rounded-sm {% if r.get_transaction_type_display == 'Borrow Book' %} text-red-700 bg-red-100 {% else %} text-green-700 bg-green-100 {% endif %}"> {{ r.get_transaction_type_display }} </span> </td>
+                <td class="px-4 py-2"> {{ r.book_name.price|floatformat:2|intcomma }} Taka </td>
+                <td class="px-4 py-2"> {{ r.balance_after_transaction|floatformat:2|intcomma }} Taka </td>
+                
+                {% if r.get_transaction_type_display == 'Return Book' %} 
+                    <td class="px-4 py-2">  </td>
+                {% else %}
+                    <td class="px-4 py-2">
+                        {% if not r.is_returned %}
+                            <a href="{% url 'returnBook' r.id %}" 
+                            type="button" 
+                            class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-1 me-2 mb-2">
+                                Return Book
+                            </a>
+                        {% else %}
+                            <button type="button" 
+                                    class="text-white bg-green-400 cursor-not-allowed font-medium rounded-lg text-sm px-6 py-1 me-2 mb-2" 
+                                    disabled>
+                                Returned
+                            </button>
+                        {% endif %}
+                    </td>
+                {% endif %}                
+            </tr>
+        {% endif %} 
+      {% endfor %} 
+       
+    </tbody>
+  </table>
+</div>
+{% endblock %}

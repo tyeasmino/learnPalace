@@ -1,0 +1,72 @@
+{% extends 'base.html' %} 
+{% load static %} 
+ 
+{% block content %}
+<div class="container mx-auto flex flex-col md:flex-row items-center my-12 ">
+    <div class="flex  flex-col w-full   justify-center items-start py-12   px-6 bg-white rounded-2xl bg-opacity-70 mx-3">
+        <h1 class="font-bold text-4xl my-4">Welcome to LearnPalace  </h1>
+        <p class="leading-normal mb-4">
+            At LearnPalace, we revolutionize the way education is delivered and received. Our state-of-the-art Learning Management System (LMS) is designed to facilitate seamless, engaging, and personalized learning experiences for students, educators, and institutions alike.
+        </p>
+
+        <h3 class="font-bold my-4">What is LearnPalace?</h3>
+        <p class="leading-normal mb-4">
+            LearnPalace is a comprehensive online platform that centralizes all your educational needs. From course creation and content delivery to performance tracking and reporting, our LMS streamlines the entire learning process, making it efficient and effective for everyone involved.
+        </p> 
+    </div>
+    <div class="w-50  lg:py-6 text-center ">
+        <img class ="rounded-2xl" src ="{% static 'lms.png' %}"/>
+    </div>
+</div>
+
+
+<button type="button" class="inline-flex items-center px-5 py-3 mb-5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+  Total Book Found
+  <span class="inline-flex items-center mx-2 justify-center w-4 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+    {{ book | length }}
+  </span>
+  </button>
+  
+
+ 
+
+<br>
+  <a href=" {% url 'home' %} " style="font-size: 18px" class="btn btn-outline-secondary hover:text-white mx-1 font-bold"> All </a>
+      {% for i in category %}
+        <a href=" {% url 'category_wise_books' i.slug %} " style="font-size: 18px" class=" hover:text-white mx-4 font-bold"> {{ i }} </a>
+      {% endfor %} 
+    <hr> 
+<div class="container flex gap-4 mx-auto">
+    
+
+ 
+
+
+  <div class="py-5">
+        <div class="row flex flex-wrap justify-center gap-5 p-2 ">
+          {% for b in book %}
+           <div class="card bg-indigo-200 shadow-md rounded-md p-5 my-2" style="width: 25rem;">
+            <img src="{{ b.book_img.url }}" class="card-img-top" style="height: 150px;">
+            <div class="card-body mt-5">
+              <h5 class="card-title font-bold"> {{ b.book_name }} </h5>
+
+              <span class="card-title font-bold"> Category: </span> <span>  {{ b.category }} </span> <br>
+              <span class="card-text font-bold"> Price: </span> <span>  {{ b.price }} Taka </span> <br>
+              <span class="card-text font-bold"> Quantity: </span> <span> {{ b.quantity }} </span> <br>
+              <p class="card-text">   {{ b.description | truncatechars:70 }}  </p>
+              <a href=" {% url 'bookDetails' b.id %} " class="">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 mt-2 px-4 rounded">
+                  Details
+                </button>
+              </a>
+              
+            </div>
+          </div>  
+          {% endfor %}
+        </div>
+    </div> 
+  </div>
+
+      
+</div>
+{% endblock %}

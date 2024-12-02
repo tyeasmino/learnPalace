@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% load static %} {% block head_title %} - Add Book Details {% endblock %} 
+{% block content %} 
+
+{% if form.non_field_errors %} {% for error in form.non_field_errors %}
+<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-2" role="alert">
+    <p class="font-bold">Error!</p>
+    <p class="block sm:inline">{{ error }}</p>
+</div>
+{% endfor %} {% endif %}  
+
+<div class="bg-white px-3 py-4 rounded-xl my-6">
+    <h1 class="font-bold text-3xl text-center pb-5 shadow-md">Add Book Details</h1>
+    <div class="w-full mt-10">
+        <form method="post" enctype="multipart/form-data" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            {% csrf_token %} {% for hidden_field in form.hidden_fields %} {{ hidden_field.errors }} {{ hidden_field }} {% endfor %}
+            
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.book_name.id_for_label }}">
+                        {{ form.book_name.label }}
+                    </label> {{ form.book_name }} {% if form.book_name.errors %} {% for error in form.book_name.errors %}
+                    <p class="text-red-600 text-sm italic pb-2">{{ error }}</p>
+                    {% endfor %} {% endif %}
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.author_name.id_for_label }}">
+                        {{ form.author_name.label }}
+                    </label> {{ form.author_name }} {% if form.author_name.errors %} {% for error in form.author_name.errors %}
+                    <p class="text-red-600 text-sm italic pb-2">{{ error }}</p>
+                    {% endfor %} {% endif %}
+                </div>
+                <div class="w-full md:w-2/2 px-3 mt-6">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.description.id_for_label }}">
+                        {{ form.description.label }}
+                    </label> {{ form.description }} {% if form.description.errors %} {% for error in form.description.errors %}
+                    <p class="text-red-600 text-sm italic pb-2">{{ error }}</p>
+                    {% endfor %} {% endif %}
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.quantity.id_for_label }}">
+                        {{ form.quantity.label }}
+                    </label> {{ form.quantity }} {% if form.quantity.errors %} {% for error in form.quantity.errors %}
+                    <p class="text-red-600 text-sm italic pb-2">{{ error }}</p>
+                    {% endfor %} {% endif %}
+                </div>
+                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.price.id_for_label }}">
+                        {{ form.price.label }}
+                    </label> {{ form.price }} {% if form.price.errors %} {% for error in form.price.errors %}
+                    <p class="text-red-600 text-sm italic pb-2">{{ error }}</p>
+                    {% endfor %} {% endif %}
+                </div>
+             
+                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.category.id_for_label }}">
+                        {{ form.category.label }}
+                    </label> {{ form.category }} {% if form.category.errors %} {% for error in form.category.errors %}
+                    <p class="text-red-600 text-sm italic pb-2">{{ error }}</p>
+                    {% endfor %} {% endif %}
+                </div>
+                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.book_img.id_for_label }}">
+                        {{ form.book_img.label }}
+                    </label> {{ form.book_img }} {% if form.book_img.errors %} {% for error in form.book_img.errors %}
+                    <p class="text-red-600 text-sm italic pb-2">{{ error }}</p>
+                    {% endfor %} {% endif %}
+                </div>
+            </div>
+               
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Add Book Details
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

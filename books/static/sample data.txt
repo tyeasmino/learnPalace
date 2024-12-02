@@ -1,0 +1,125 @@
+book category
+------------------------------------------------
+Programming Languages
+Algorithms and Data Structures
+Web Development
+Mobile Development
+Machine Learning and Artificial Intelligence
+Software Engineering Practices
+Databases
+Cybersecurity
+Game Development
+DevOps and Cloud Computing
+
+
+
+
+Programming Languages
+Python Crash Course by Eric Matthes
+
+Head First Python by Paul Barry
+
+Learn Python 3 the Hard Way by Zed A. Shaw
+
+Effective Java by Joshua Bloch
+
+Java: The Complete Reference by Herbert Schildt
+
+Algorithms and Data Structures
+Introduction to Algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein
+
+Data Structures and Algorithms Made Easy by Narasimha Karumanchi
+
+Grokking Algorithms by Aditya Bhargava
+
+The Algorithm Design Manual by Steven S. Skiena
+
+Algorithms by Robert Sedgewick and Kevin Wayne
+
+Web Development
+HTML and CSS: Design and Build Web Sites by Jon Duckett
+
+JavaScript: The Definitive Guide by David Flanagan
+
+Eloquent JavaScript by Marijn Haverbeke
+
+Learning PHP, MySQL & JavaScript: With jQuery, CSS & HTML5 by Robin Nixon
+
+Don't Make Me Think, Revisited by Steve Krug
+
+Mobile Development
+Beginning App Development with Flutter: Create Cross-Platform Mobile Apps by Rap Payne
+
+Mobile App Development with Ionic by Chris Griffith
+
+Cracking iPhone and Android Native Development by Matthew Baxter-Reynolds
+
+Lean Mobile App Development by Mike van Drongelen and Adam Dennis
+
+Hello, Android by Ed Burnette
+
+Machine Learning and Artificial Intelligence
+Pattern Recognition and Machine Learning by Christopher Bishop
+
+Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville
+
+The Elements of Statistical Learning by Trevor Hastie, Robert Tibshirani, and Jerome Friedman
+
+Machine Learning: A Probabilistic Perspective by Kevin P. Murphy
+
+Artificial Intelligence: A Modern Approach by Stuart Russell and Peter Norvig
+
+Software Engineering Practices
+The Pragmatic Programmer by Andrew Hunt and David Thomas
+
+Clean Code by Robert C. Martin
+
+Refactoring: Improving the Design of Existing Code by Martin Fowler
+
+Design Patterns: Elements of Reusable Object-Oriented Software by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides
+
+Software Engineering: A Practitioner's Approach by Roger S. Pressman
+
+Databases
+Database System Concepts by Abraham Silberschatz, Henry F. Korth, and S. Sudarshan
+
+SQL and Relational Theory by C. J. Date
+
+Database Design for Mere Mortals by Michael J. Hernandez
+
+NoSQL Distilled by Pramod J. Sadalage and Martin Fowler
+
+Database Management Systems by Raghu R. Murthy
+
+Cybersecurity
+The Web Application Hacker's Handbook by Dafydd Stuttard and Marcus Pinto
+
+Metasploit: The Penetration Tester's Guide by David Kennedy, James W. Murray, and Mati Aharoni
+
+Hacking: The Art of Exploitation by Jon Erickson
+
+Network Security Essentials by William Stallings
+
+Cybersecurity and Cyberwarfare: What Everyone Needs to Know by P.W. Singer and Allan Friedman
+
+Game Development
+Game Programming Patterns by Robert Nystrom
+
+The Art of Game Design: A Book of Lenses by Jesse Schell
+
+Unity in Action: Multiplatform Game Development in C# by Jason van Gumster
+
+Game Engine Architecture by Jason Gregory
+
+Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman
+
+DevOps and Cloud Computing
+The Phoenix Project by Gene Kim, Kevin Behr, and George Spafford
+
+Site Reliability Engineering: How Google Runs Production Systems by Niall Richard Murphy, Betsy Beyer, Chris Jones, and Jennifer Petoff
+
+Cloud Computing: Concepts, Technology & Architecture by Thomas Erl
+
+Infrastructure as Code: Managing Servers in the Cloud by Kief Morris
+
+DevOps: A Software Architect's Perspective by Scott W. Ambler and Mark Lines
