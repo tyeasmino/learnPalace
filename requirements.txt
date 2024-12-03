@@ -174,14 +174,9 @@ requests-toolbelt
 rfc3986
 rich
 rsa
-scikit-learn
-scipy
-seaborn
-selenium
 Send2Trash
 SimpleWebSocketServer
 six
-sklearn
 sniffio
 sortedcontainers
 soupsieve
