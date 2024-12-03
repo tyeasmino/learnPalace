@@ -162,10 +162,7 @@ python-dotenv
 python-multipart
 pytweening
 pytz
-PyWavelets
-pywin32
-pywin32-ctypes
-pywinpty
+PyWavelet
 PyYAML
 pyzmq
 qtconsole
