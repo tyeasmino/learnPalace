@@ -148,7 +148,6 @@ pyOpenSSL
 pyparsing
 PyPDF2
 pyperclip
-pypiwin32
 PyRect
 pyrsistent
 PyScreeze
