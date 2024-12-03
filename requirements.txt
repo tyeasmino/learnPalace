@@ -82,9 +82,6 @@ lxml
 Markdown
 MarkupPy
 MarkupSafe
-matplot
-matplotlib
-matplotlib-inline
 mediapipe
 mistune
 more-itertools
@@ -100,15 +97,10 @@ notebook
 numpy
 oauthlib
 odfpy
-opencv-contrib-python
-opencv-python
 openpyxl
 opt-einsum
 outcome
 packaging
-pandas
-pandas-profiling
-pandocfilters
 parso
 patsy
 pefile
